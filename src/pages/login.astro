@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Accede a tu negocio · Grün Loyalty"
+  description="Te enviaremos un enlace de acceso directo a tu correo. Sin contraseñas."
+  isMarketing={false}
+  hideChrome={true}
+>
+  <main class="flex flex-1 items-center justify-center px-4 py-16">
+    <div class="w-full max-w-sm">
+      <a class="mb-8 inline-flex items-center gap-2 text-ink" href="/">
+        <img
+          src="/grun-logo-loyalty.png"
+          alt="Grün Loyalty"
+          class="h-6 w-6 text-accent object-contain rounded-md"
+        />
+        <span class="text-lg font-semibold tracking-tight">Grün</span>
+      </a>
+      <h1 class="text-2xl font-semibold tracking-tight">Accede a tu negocio</h1>
+      <p class="mt-1 text-ink-soft">
+        Te enviaremos un enlace de acceso directo a tu correo. Sin contraseñas.
+      </p>
+      <div class="mt-8">
+        <form
+          class="space-y-4"
+          action="https://loyalty.grunagency.com/login"
+          enctype="multipart/form-data"
+          method="POST"
+        >
+          <input type="hidden" name="$ACTION_REF_1" />
+          <input
+            type="hidden"
+            name="$ACTION_1:0"
+            value='{"id":"607e34b4c8c057bc8d43c6bcdb25560c99c5085b61","bound":"$@1"}'
+          />
+          <input type="hidden" name="$ACTION_1:1" value="[{}]" />
+          <input type="hidden" name="$ACTION_KEY" value="k9fb43c847fdb091486a1a0dc24c1a5aa" />
+          <div class="space-y-1.5">
+            <label class="block text-sm font-medium text-ink-soft" for="email">
+              Correo electrónico
+            </label>
+            <input
+              class="h-11 w-full rounded-xl border bg-paper px-3.5 text-[15px] text-ink placeholder:text-ink-muted focus:outline-none focus:ring-2 focus:ring-accent/40 border-line"
+              id="email"
+              type="email"
+              autocomplete="email"
+              placeholder="tu@negocio.com"
+              required
+              autofocus
+              name="email"
+            />
+          </div>
+          <button
+            class="inline-flex items-center justify-center gap-2 rounded-full font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 disabled:opacity-50 disabled:cursor-not-allowed bg-ink text-cream hover:bg-black h-12 px-6 text-base w-full"
+            type="submit"
+          >
+            Enviar enlace de acceso
+          </button>
+        </form>
+      </div>
+      <p class="mt-8 text-sm text-ink-muted">
+        ¿Nuevo por aquí? Usa el mismo formulario. Tu negocio se configurará al ingresar.
+      </p>
+      <p class="mt-2 text-sm text-ink-muted">
+        Al ingresar aceptas nuestros <a class="underline" href="/terms">términos</a> y{' '}
+        <a class="underline" href="/privacy">política de privacidad</a>.
+      </p>
+    </div>
+  </main>
+</BaseLayout>

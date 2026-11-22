@@ -1,0 +1,2789 @@
+/* ==========================================================================
+   GRÜN LOYALTY V2 — CAMPAIGN ART DIRECTION WITH MONTSERRAT & REAL IPHONE FRAME
+   - Typography: Montserrat (400, 500, 600, 700) + Rethink Sans + JetBrains Mono
+   - Minimal Header: Logo only (no "Grün" text, no section links) + Iniciar sesión + Configura tu negocio
+   - Official Apple Wallet & Google Wallet SVG Badges
+   - Real iPhone Hardware Bezel (/iphone-frame-real.png) in Scene 1 & Scene 4
+   - Harmonious Plum & Warm Lavender Palette across all counter & pass scenes
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-SemiBold.woff2') format('woff2');
+  font-weight: 600 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.gscene-page {
+  --gs-white: #FFFFFF;
+  --gs-cream: #FAF8FA;
+  --gs-lavender: #F3EAF2;
+  --gs-lavender-deep: #E8D8E6;
+  --gs-plum: #751E68;
+  --gs-plum-dark: #521248;
+  --gs-plum-night: #230920;
+  --gs-obsidian: #141115;
+  --gs-ink: #121212;
+  --gs-ink-soft: #4E4A52;
+  --gs-ink-muted: #76717A;
+  --gs-line: #E6E2E8;
+
+  --gs-font-display: 'Montserrat', var(--font-rethink-sans), system-ui, -apple-system, sans-serif;
+  --gs-font-sans: 'Montserrat', var(--font-rethink-sans), system-ui, -apple-system, sans-serif;
+  --gs-font-mono: var(--font-jetbrains-mono), 'JetBrains Mono', ui-monospace, monospace;
+
+  background-color: var(--gs-white);
+  color: var(--gs-ink);
+  font-family: var(--gs-font-sans);
+  min-height: 100vh;
+  overflow-x: clip;
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+.gscene-page *,
+.gscene-page *::before,
+.gscene-page *::after {
+  box-sizing: border-box;
+}
+
+.gscene-skip {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 999;
+  background: var(--gs-ink);
+  color: var(--gs-white);
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.gscene-skip:focus-visible {
+  top: 14px;
+  outline: 2px solid var(--gs-plum);
+}
+
+.gscene-page a:focus-visible,
+.gscene-page button:focus-visible,
+.gscene-page summary:focus-visible {
+  outline: 2px solid var(--gs-plum);
+  outline-offset: 3px;
+}
+
+.gscene-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .gscene-container {
+    padding: 0 40px;
+  }
+}
+
+/* ==========================================================================
+   MINIMAL HEADER NAVIGATION (Logo Only + Iniciar sesión + Configura tu negocio)
+   ========================================================================== */
+.gscene-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(18, 18, 18, 0.07);
+}
+
+.gscene-nav-row {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.gscene-logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.gscene-logo-img {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  object-fit: contain;
+  box-shadow: 0 2px 8px rgba(117, 30, 104, 0.18);
+}
+
+.gscene-nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+@media (min-width: 640px) {
+  .gscene-nav-cta {
+    gap: 22px;
+  }
+}
+
+.gscene-signin {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--gs-ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.gscene-signin:hover {
+  color: var(--gs-plum);
+}
+
+.gscene-btn-ink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 42px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: var(--gs-ink);
+  color: var(--gs-white);
+  font-family: var(--gs-font-display);
+  font-size: 0.86rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.16s ease, background-color 0.16s ease;
+  touch-action: manipulation;
+}
+
+@media (min-width: 640px) {
+  .gscene-btn-ink {
+    height: 44px;
+    padding: 0 24px;
+    font-size: 0.92rem;
+  }
+}
+
+.gscene-btn-ink:hover {
+  background: #000000;
+  transform: translateY(-1px);
+}
+
+.gscene-btn-ink--lg {
+  height: 54px;
+  padding: 0 30px;
+  font-size: 1rem;
+}
+
+.gscene-btn-plum {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 54px;
+  padding: 0 30px;
+  border-radius: 999px;
+  background: var(--gs-plum);
+  color: var(--gs-white);
+  font-family: var(--gs-font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.16s ease, background-color 0.16s ease;
+}
+
+.gscene-btn-plum:hover {
+  background: var(--gs-plum-dark);
+  transform: translateY(-1px);
+}
+
+.gscene-btn-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 54px;
+  padding: 0 30px;
+  border-radius: 999px;
+  background: var(--gs-white);
+  color: var(--gs-ink);
+  font-family: var(--gs-font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.16s ease;
+}
+
+.gscene-btn-white:hover {
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   SCENE 1 — THE WALLET (HERO WITH REAL IPHONE HARDWARE FRAME + OFFICIAL BADGES)
+   ========================================================================== */
+.gscene-hero {
+  position: relative;
+  padding: 36px 0 72px;
+  background: radial-gradient(circle at 74% 46%, rgba(117, 30, 104, 0.12) 0%, rgba(243, 234, 242, 0.45) 38%, rgba(255, 255, 255, 0) 70%);
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .gscene-hero {
+    padding: 52px 0 92px;
+  }
+}
+
+.gscene-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 44px;
+  align-items: center;
+}
+
+.gscene-hero-grid > * {
+  min-width: 0;
+}
+
+@media (min-width: 1080px) {
+  .gscene-hero-grid {
+    grid-template-columns: minmax(0, 5.1fr) minmax(0, 6.9fr);
+    gap: 36px;
+  }
+}
+
+.gscene-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--gs-lavender);
+  color: var(--gs-plum);
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.gscene-hero-h1 {
+  font-family: var(--gs-font-display);
+  font-size: clamp(2.35rem, 4.3vw, 4rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--gs-ink);
+  text-wrap: balance;
+}
+
+.gscene-hero-lead {
+  margin-top: 20px;
+  font-size: clamp(1.02rem, 1.25vw, 1.18rem);
+  line-height: 1.55;
+  color: var(--gs-ink-soft);
+  max-width: 46ch;
+}
+
+/* Official Apple Wallet & Google Wallet Badges */
+.gscene-wallet-badges {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gscene-wallet-badges-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gs-ink-muted);
+}
+
+.gscene-wallet-badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.gscene-official-wallet-img {
+  height: 40px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 4px 10px rgba(18, 18, 18, 0.1));
+}
+
+.gscene-hero-cta-row {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+/*RIGHT HERO ARTWORK STAGE: Real iPhone Mockup + Overlapping Floating Wallet Cards */
+.gscene-hero-composition {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  min-height: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .gscene-hero-composition {
+    min-height: 580px;
+    padding: 16px 0;
+  }
+}
+
+/* Floating Background Wallet Passes */
+.gscene-float-pass {
+  width: 266px;
+  border-radius: 22px;
+  padding: 18px;
+  color: #FFFFFF;
+  box-shadow: 0 32px 64px -18px rgba(17, 17, 19, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.18);
+  outline: 1px solid transparent;
+  user-select: none;
+  transition:
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.55s ease;
+}
+
+@keyframes gsceneNotifPop {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gscene-float-pass--barber {
+  position: absolute;
+  left: -8px;
+  top: 56px;
+  z-index: 1;
+  opacity: 0;
+  transform: translate(150px, 28px) rotate(0deg);
+  display: none;
+  transition-delay: 0.08s;
+}
+
+.gscene-float-pass--barber.is-entered {
+  opacity: 1;
+  transform: rotate(-11deg);
+}
+
+.gscene-float-pass--barber.is-entered:hover {
+  transition-delay: 0s;
+  transition-duration: 0.28s;
+  transform: translateY(-8px) rotate(-11deg);
+}
+
+.gscene-float-pass--bakery {
+  position: absolute;
+  right: -8px;
+  top: 124px;
+  z-index: 1;
+  opacity: 0;
+  transform: translate(-150px, 18px) rotate(0deg);
+  display: none;
+  transition-delay: 0.2s;
+}
+
+.gscene-float-pass--bakery.is-entered {
+  opacity: 1;
+  transform: rotate(10.5deg);
+}
+
+.gscene-float-pass--bakery.is-entered:hover {
+  transition-delay: 0s;
+  transition-duration: 0.28s;
+  transform: translateY(-8px) rotate(10.5deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gscene-float-pass--barber,
+  .gscene-float-pass--bakery {
+    opacity: 1 !important;
+    transition: none !important;
+  }
+  .gscene-float-pass--barber {
+    transform: rotate(-11deg) !important;
+  }
+  .gscene-float-pass--bakery {
+    transform: rotate(10.5deg) !important;
+  }
+  .gscene-floating-notif {
+    animation: none !important;
+  }
+}
+
+@media (min-width: 680px) {
+  .gscene-float-pass--barber,
+  .gscene-float-pass--bakery {
+    display: block;
+  }
+}
+
+/* REAL IPHONE HARDWARE MOCKUP CONTAINER (Top-Half Cropped iPhone Stage) */
+.gscene-real-iphone {
+  position: relative;
+  z-index: 3;
+  width: 326px;
+  height: 486px;
+  overflow: hidden;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 32px 64px rgba(35, 11, 32, 0.38));
+}
+
+.gscene-real-iphone-inner {
+  position: relative;
+  width: 326px;
+  height: 665px;
+}
+
+.gscene-real-iphone-chassis {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Screen Inset positioned inside the real titanium/aluminum bezel of /iphone-frame-real.png */
+.gscene-real-iphone-screen {
+  position: absolute;
+  top: 14px;
+  left: 17px;
+  right: 17px;
+  bottom: 15px;
+  border-radius: 42px;
+  background: #F4F1F5;
+  color: var(--gs-ink);
+  z-index: 2;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 11px 13px 16px;
+}
+
+/* Authentic iOS Dynamic Island & Status Bar inside the real screen */
+.gscene-real-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 8px 10px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--gs-ink);
+}
+
+.gscene-real-dynamic-island {
+  width: 88px;
+  height: 24px;
+  border-radius: 999px;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 8px;
+}
+
+.gscene-real-camera-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 99px;
+  background: #182338;
+  border: 1.5px solid #0D131F;
+}
+
+.gscene-real-wallet-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 4px 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gs-ink);
+}
+
+/* Realistic Apple Wallet Pass inside the iPhone Screen (Compact proportion, zero empty dead space) */
+.gscene-apple-pass {
+  border-radius: 18px;
+  padding: 14px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  box-shadow: 0 14px 30px rgba(18, 18, 18, 0.24);
+}
+
+.gscene-pass-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.gscene-pass-id {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.gscene-pass-monogram {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--gs-font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.gscene-pass-bname {
+  font-family: var(--gs-font-display);
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.gscene-pass-bsub {
+  font-size: 0.66rem;
+  opacity: 0.86;
+}
+
+.gscene-pass-counter {
+  text-align: right;
+}
+
+.gscene-pass-counter small {
+  display: block;
+  font-size: 0.56rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.84;
+}
+
+.gscene-pass-counter strong {
+  font-family: var(--gs-font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.gscene-pass-counter strong span {
+  font-size: 0.82rem;
+  opacity: 0.8;
+}
+
+/* Crisp Stamp Strip inside Wallet Pass */
+.gscene-pass-stamp-strip {
+  background: #FFFFFF;
+  color: var(--gs-ink);
+  border-radius: 13px;
+  padding: 11px 8px;
+}
+
+.gscene-stamp-matrix {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 6px;
+  justify-items: center;
+}
+
+.gscene-stamp-coin {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.18s ease, background-color 0.18s ease;
+}
+
+.gscene-stamp-coin--latest {
+  transform: scale(1.08);
+}
+
+.gscene-pass-fields {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.gscene-pass-field-lbl {
+  display: block;
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.82;
+}
+
+.gscene-pass-field-val {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 1px;
+}
+
+.gscene-pass-qr-card {
+  background: #FFFFFF;
+  color: var(--gs-ink);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gscene-qr-svg {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.gscene-qr-meta {
+  text-align: left;
+}
+
+.gscene-qr-serial {
+  font-family: var(--gs-font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--gs-ink);
+}
+
+.gscene-qr-caption {
+  font-size: 0.64rem;
+  color: var(--gs-ink-soft);
+  line-height: 1.25;
+  margin-top: 2px;
+}
+
+/* Floating Overlapping Wallet Notification Banner */
+.gscene-floating-notif {
+  position: relative;
+  z-index: 5;
+  margin-top: 14px;
+  width: 100%;
+  max-width: 340px;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(117, 30, 104, 0.24);
+  border-radius: 20px;
+  padding: 13px 16px;
+  box-shadow: 0 22px 44px -12px rgba(18, 18, 18, 0.28);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--gs-ink);
+  animation: gsceneNotifPop 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.42s both;
+}
+
+@media (min-width: 1080px) {
+  .gscene-floating-notif {
+    position: absolute;
+    left: 10px;
+    bottom: 22px;
+    margin-top: 0;
+    width: 350px;
+    max-width: 350px;
+  }
+}
+
+.gscene-notif-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.gscene-notif-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.75rem;
+}
+
+.gscene-notif-head strong {
+  font-weight: 700;
+  color: var(--gs-ink);
+}
+
+.gscene-notif-head span {
+  font-size: 0.68rem;
+  color: var(--gs-plum);
+  font-weight: 600;
+}
+
+.gscene-notif-body {
+  font-size: 0.78rem;
+  color: var(--gs-ink-soft);
+  margin-top: 2px;
+  line-height: 1.3;
+}
+
+/* Interactive Quick-Switcher Pill Bar under Hero Artwork */
+.gscene-hero-switcher {
+  margin-top: 16px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--gs-cream);
+  border: 1px solid var(--gs-line);
+  padding: 6px;
+  border-radius: 999px;
+}
+
+.gscene-switch-pill {
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--gs-ink-soft);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.gscene-switch-pill--active {
+  background: var(--gs-ink);
+  color: var(--gs-white);
+}
+
+.gscene-switch-action {
+  padding: 7px 15px;
+  border-radius: 999px;
+  border: none;
+  background: var(--gs-plum);
+  color: var(--gs-white);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+/* ==========================================================================
+   SCENE 2 — YOUR BRAND, IN THEIR WALLET (REALISTIC APPLE/GOOGLE WALLET PASSES)
+   Includes realistic merchant hero strip banner, authentic pass fields,
+   location/branch info, and high-contrast scannable QR codes.
+   ========================================================================== */
+.gscene-showcase-plum {
+  background: var(--gs-plum);
+  color: var(--gs-white);
+  padding: 80px 0 0;
+  border-radius: 36px 36px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 960px) {
+  .gscene-showcase-plum {
+    padding: 108px 0 0;
+    border-radius: 48px 48px 0 0;
+  }
+}
+
+.gscene-scene-head-center {
+  max-width: 780px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.gscene-display-h2 {
+  font-family: var(--gs-font-display);
+  font-size: clamp(2rem, 3.8vw, 3.35rem);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.gscene-display-sub {
+  margin-top: 16px;
+  font-size: clamp(1rem, 1.25vw, 1.16rem);
+  line-height: 1.55;
+  opacity: 0.9;
+  max-width: 56ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gscene-passes-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: stretch;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+@media (min-width: 980px) {
+  .gscene-passes-gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+  }
+}
+
+.gscene-showcase-plum .gscene-container {
+  max-width: 1320px;
+}
+
+.gscene-ad-pass-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+  max-width: 340px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.gscene-passes-gallery .gscene-apple-pass {
+  flex: 1;
+  min-height: 468px;
+  justify-content: space-between;
+  padding: 24px 20px;
+  border-radius: 24px;
+  gap: 18px;
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gscene-passes-gallery .gscene-pass-bname {
+  font-size: 0.96rem;
+}
+
+.gscene-passes-gallery .gscene-pass-bsub {
+  font-size: 0.7rem;
+}
+
+.gscene-passes-gallery .gscene-pass-counter strong {
+  font-size: 1.38rem;
+}
+
+.gscene-passes-gallery .gscene-pass-stamp-strip {
+  padding: 16px 10px;
+}
+
+.gscene-passes-gallery .gscene-stamp-matrix {
+  gap: 10px 4px;
+}
+
+.gscene-passes-gallery .gscene-stamp-coin {
+  width: 34px;
+  height: 34px;
+}
+
+.gscene-passes-gallery .gscene-pass-field-val {
+  font-size: 0.8rem;
+}
+
+.gscene-passes-gallery .gscene-pass-qr-card {
+  flex: 1;
+  min-height: 112px;
+  padding: 16px;
+}
+
+.gscene-passes-gallery .gscene-qr-svg {
+  width: 78px;
+  height: 78px;
+}
+
+.gscene-ad-pass-wrap:hover .gscene-wallet-native-pass {
+  transform: translateY(-10px);
+  box-shadow: 0 38px 72px -14px rgba(17, 6, 15, 0.72), 0 0 0 1px rgba(255, 255, 255, 0.24) !important;
+}
+
+/* Native Apple Wallet Pass Layout (matches real delivered pass) */
+.gscene-wallet-native-pass {
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  min-height: 468px;
+  border-radius: 22px;
+  padding: 22px 20px 20px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+  box-shadow: 0 28px 56px -16px rgba(17, 6, 15, 0.58), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gscene-wallet-native-pass::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    118deg,
+    rgba(255, 255, 255, 0.09) 0%,
+    rgba(255, 255, 255, 0.03) 48%,
+    transparent 48.4%
+  );
+  pointer-events: none;
+}
+
+.gscene-native-head {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  position: relative;
+  z-index: 1;
+}
+
+.gscene-native-emblem {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.72);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  flex-shrink: 0;
+}
+
+.gscene-native-title {
+  font-family: var(--gs-font-display);
+  font-size: 0.96rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+
+.gscene-native-stamps {
+  display: grid;
+  gap: 18px 8px;
+  justify-items: center;
+  align-items: center;
+  padding: 12px 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.gscene-native-stamp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.34);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.gscene-native-stamp.is-filled {
+  color: #FFFFFF;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.22));
+}
+
+.gscene-native-fields {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.gscene-native-lbl {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.gscene-native-val {
+  margin-top: 3px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.gscene-native-qr-box {
+  width: 152px;
+  margin: 4px auto 0;
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 12px 12px 9px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
+  position: relative;
+  z-index: 1;
+}
+
+.gscene-native-qr-svg {
+  width: 112px;
+  height: 112px;
+  display: block;
+}
+
+.gscene-native-qr-note {
+  font-size: 0.62rem;
+  font-weight: 500;
+  color: #27272A;
+  letter-spacing: -0.01em;
+}
+
+/* Scene 2: Real iPhone Apple Wallet Stack Showcase (Half-cropped at bottom edge, light iOS Wallet bg) */
+.gscene-wallet-iphone-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gscene-wallet-iphone {
+  position: relative;
+  width: 334px;
+  height: 396px;
+  overflow: hidden;
+  flex-shrink: 0;
+  filter: drop-shadow(0 36px 72px rgba(17, 6, 15, 0.48));
+}
+
+.gscene-wallet-iphone-inner {
+  position: relative;
+  width: 334px;
+  height: 682px;
+}
+
+.gscene-wallet-iphone-screen {
+  position: absolute;
+  top: 14px;
+  left: 17px;
+  right: 17px;
+  bottom: 16px;
+  border-radius: 42px;
+  background: #F5F5F7;
+  color: #121212;
+  z-index: 2;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 12px 18px;
+}
+
+.gscene-wallet-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 10px 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #121212;
+}
+
+.gscene-wallet-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 6px 10px;
+}
+
+.gscene-wallet-topbar-title {
+  font-family: var(--gs-font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #121212;
+}
+
+.gscene-wallet-topbar-action {
+  background: rgba(18, 18, 18, 0.08);
+  color: #121212;
+  border: none;
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.gscene-wallet-topbar-action:hover {
+  background: rgba(18, 18, 18, 0.14);
+}
+
+.gscene-wallet-main-slot {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(44px) scale(0.95);
+  transition:
+    max-height 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.45s ease,
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    margin-bottom 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  margin-bottom: 0;
+}
+
+.gscene-wallet-main-slot.is-open {
+  max-height: 310px;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  margin-bottom: 10px;
+}
+
+.gscene-wallet-native-pass--inphone {
+  min-height: 268px;
+  padding: 13px 14px 12px;
+  gap: 8px;
+  border-radius: 18px;
+  box-shadow: 0 16px 30px rgba(18, 18, 18, 0.22);
+}
+
+.gscene-wallet-native-pass--inphone .gscene-native-qr-svg {
+  width: 62px;
+  height: 62px;
+}
+
+.gscene-wallet-stack {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4px;
+  transition: margin-top 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gscene-wallet-stack.is-docked {
+  margin-top: 0;
+}
+
+.gscene-wallet-stack-item {
+  width: 100%;
+  border: none;
+  border-radius: 16px 16px 0 0;
+  padding: 13px 14px 44px;
+  color: #FFFFFF;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 -6px 16px rgba(18, 18, 18, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  margin-top: -26px;
+  transition: transform 0.25s ease;
+}
+
+.gscene-wallet-stack-item:first-child {
+  margin-top: 0;
+}
+
+.gscene-wallet-stack.is-docked .gscene-wallet-stack-item {
+  padding: 10px 14px 30px;
+  margin-top: -18px;
+}
+
+.gscene-wallet-stack.is-docked .gscene-wallet-stack-item:first-child {
+  margin-top: 0;
+}
+
+.gscene-wallet-stack-item:hover {
+  transform: translateY(-5px);
+}
+
+.gscene-wallet-stack-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.gscene-wallet-hint {
+  font-size: 0.86rem;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+}
+
+.gscene-real-pass-card {
+  border-radius: 24px;
+  padding: 20px;
+  color: #FFFFFF;
+  box-shadow: 0 32px 64px -16px rgba(17, 6, 15, 0.58), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  flex: 1;
+}
+
+/* Realistic Pass Strip Header Banner */
+.gscene-real-pass-strip {
+  border-radius: 14px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.97);
+  color: var(--gs-ink);
+}
+
+.gscene-real-pass-fields-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 4px 2px;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.gscene-ad-pass-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  font-size: 0.86rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ==========================================================================
+   SCENE 3 — FROM QR TO WALLET (Visual Enrollment Sequence on Soft Lavender)
+   ========================================================================== */
+.gscene-enrollment-lavender {
+  background: var(--gs-lavender);
+  color: var(--gs-ink);
+  padding: 80px 0 96px;
+}
+
+@media (min-width: 960px) {
+  .gscene-enrollment-lavender {
+    padding: 108px 0 120px;
+  }
+}
+
+.gscene-enroll-card {
+  background: var(--gs-white);
+  border-radius: 36px;
+  padding: 36px 24px;
+  box-shadow: 0 24px 60px -24px rgba(117, 30, 104, 0.14);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .gscene-enroll-card {
+    padding: 56px 60px;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 56px;
+  }
+}
+
+.gscene-counter-stage {
+  background: var(--gs-plum);
+  border-radius: 28px;
+  padding: 28px 20px;
+  color: #FFFFFF;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 430px;
+}
+
+.gscene-prewallet-phone {
+  width: 100%;
+  max-width: 342px;
+  background: #FFFFFF;
+  color: var(--gs-ink);
+  border-radius: 26px;
+  padding: 20px 18px 18px;
+  box-shadow: 0 28px 56px rgba(0, 0, 0, 0.36);
+}
+
+.gscene-prewallet-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gscene-prewallet-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #FFE6D5;
+  color: #B83B00;
+  font-family: var(--gs-font-display);
+  font-weight: 700;
+  font-size: 0.92rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.gscene-prewallet-bname {
+  font-family: var(--gs-font-display);
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--gs-ink);
+  line-height: 1.15;
+}
+
+.gscene-prewallet-bsub {
+  font-size: 0.72rem;
+  color: var(--gs-ink-muted);
+}
+
+.gscene-prewallet-loc {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--gs-ink-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.gscene-prewallet-card {
+  margin-top: 12px;
+  border-radius: 20px;
+  padding: 16px 14px 14px;
+  color: #FFFFFF;
+  box-shadow: 0 14px 28px -10px rgba(15, 64, 48, 0.42);
+}
+
+.gscene-prewallet-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.gscene-prewallet-eyebrow {
+  display: block;
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  opacity: 0.86;
+}
+
+.gscene-prewallet-reward {
+  font-family: var(--gs-font-display);
+  font-size: 1.24rem;
+  font-weight: 700;
+  line-height: 1.12;
+  margin-top: 4px;
+}
+
+.gscene-prewallet-count {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.gscene-prewallet-count strong {
+  font-family: var(--gs-font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.gscene-prewallet-count strong span {
+  font-size: 0.86rem;
+  opacity: 0.85;
+}
+
+.gscene-prewallet-count small {
+  display: block;
+  font-size: 0.55rem;
+  letter-spacing: 0.06em;
+  opacity: 0.85;
+  margin-top: 2px;
+}
+
+.gscene-prewallet-tray {
+  margin-top: 14px;
+  background: #FFFFFF;
+  border-radius: 14px;
+  padding: 14px 10px 12px;
+}
+
+.gscene-prewallet-circles {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 6px;
+  justify-items: center;
+}
+
+.gscene-prewallet-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1.8px dashed rgba(18, 18, 18, 0.3);
+}
+
+.gscene-prewallet-tray-note {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(18, 18, 18, 0.08);
+  text-align: center;
+  font-size: 0.64rem;
+  line-height: 1.35;
+  color: var(--gs-ink-soft);
+}
+
+.gscene-prewallet-actions {
+  margin-top: 16px;
+}
+
+.gscene-prewallet-welcome {
+  font-family: var(--gs-font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gs-ink);
+}
+
+.gscene-prewallet-desc {
+  margin-top: 3px;
+  font-size: 0.72rem;
+  line-height: 1.38;
+  color: var(--gs-ink-soft);
+}
+
+.gscene-prewallet-btn {
+  margin-top: 12px;
+  width: 100%;
+  height: 40px;
+  border-radius: 12px;
+  background: #121212;
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gscene-prewallet-apple {
+  display: block;
+  margin: 10px auto 0;
+  height: 40px;
+  width: auto;
+}
+
+.gscene-prewallet-foot {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.63rem;
+  color: var(--gs-ink-muted);
+}
+
+.gscene-prewallet-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #F85C00;
+  flex-shrink: 0;
+}
+
+.gscene-acrylic-stand {
+  width: 226px;
+  background: var(--gs-white);
+  color: var(--gs-ink);
+  border-radius: 20px;
+  padding: 20px 18px;
+  text-align: center;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+}
+
+.gscene-acrylic-base {
+  width: 170px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.28);
+  border-radius: 0 0 10px 10px;
+  margin: 0 auto;
+}
+
+.gscene-wallet-prompt-float {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 296px;
+  background: var(--gs-white);
+  color: var(--gs-ink);
+  border-radius: 18px;
+  padding: 13px 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.42);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.gscene-stepper-list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.gscene-stepper-item {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 18px;
+  align-items: start;
+  padding-left: 16px;
+  border-left: 3px solid var(--gs-line);
+}
+
+.gscene-stepper-item--highlight {
+  border-left-color: var(--gs-plum);
+}
+
+.gscene-stepper-num {
+  font-family: var(--gs-font-display);
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--gs-ink);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+
+.gscene-stepper-item--highlight .gscene-stepper-num {
+  color: var(--gs-plum);
+}
+
+.gscene-stepper-title {
+  font-family: var(--gs-font-display);
+  font-size: 1.16rem;
+  font-weight: 600;
+  color: var(--gs-ink);
+  line-height: 1.25;
+}
+
+.gscene-stepper-desc {
+  margin-top: 4px;
+  font-size: 0.94rem;
+  color: var(--gs-ink-soft);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   SCENE 4 — EVERY VISIT COUNTS (REAL IPHONE MOCKUP WITH BRIGHT LOCKSCREEN)
+   Uses the real /iphone-frame-real.png bezel with a crisp, bright iOS
+   wallpaper so the screen and lockscreen notifications are unmistakably legible.
+   ========================================================================== */
+.gscene-progression-cream {
+  background: var(--gs-cream);
+  padding: 84px 0 0;
+  overflow: hidden;
+}
+
+@media (min-width: 960px) {
+  .gscene-progression-cream {
+    padding: 112px 0 0;
+  }
+}
+
+.gscene-cropped-phone-stage {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Top-cropped Real iPhone Mockup (shows top 460px of the real 649px iPhone) */
+.gscene-lockscreen-iphone-crop {
+  position: relative;
+  width: 326px;
+  height: 440px;
+  overflow: hidden;
+  z-index: 3;
+  filter: drop-shadow(0 -12px 44px rgba(117, 30, 104, 0.18));
+}
+
+.gscene-lockscreen-iphone-inner {
+  position: relative;
+  width: 326px;
+  height: 665px;
+}
+
+.gscene-lockscreen-screen-bright {
+  position: absolute;
+  top: 14px;
+  left: 17px;
+  right: 17px;
+  bottom: 16px;
+  border-radius: 42px;
+  /* Luminous lavender-rose & plum iOS lockscreen wallpaper so the screen stands out clearly */
+  background:
+    radial-gradient(circle at 20% 18%, #FFE6FA 0%, transparent 55%),
+    radial-gradient(circle at 82% 35%, #E3BEF0 0%, transparent 60%),
+    linear-gradient(180deg, #F5E6F7 0%, #DFC5E8 48%, #751E68 100%);
+  color: var(--gs-ink);
+  z-index: 2;
+  padding: 12px 14px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes gsceneCalloutEnterLeft {
+  0% {
+    opacity: 0;
+    transform: translate(46px, 22px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes gsceneCalloutEnterRight {
+  0% {
+    opacity: 0;
+    transform: translate(-46px, 22px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes gsceneCalloutFloat {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0.02deg);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0) rotate(0.02deg);
+  }
+}
+
+.gscene-float-callout {
+  background: #FFFFFF;
+  border: 1px solid rgba(117, 30, 104, 0.14);
+  border-radius: 22px;
+  padding: 20px 22px;
+  box-shadow: 0 18px 38px -12px rgba(117, 30, 104, 0.16);
+  color: var(--gs-ink);
+  width: 100%;
+  max-width: 310px;
+  margin-bottom: 16px;
+  opacity: 0;
+  will-change: transform;
+}
+
+.gscene-progression-cream.is-visible .gscene-float-callout--left {
+  opacity: 1;
+  animation:
+    gsceneCalloutEnterLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.05s backwards,
+    gsceneCalloutFloat 3.4s ease-in-out 0.75s infinite;
+}
+
+.gscene-progression-cream.is-visible .gscene-float-callout--right {
+  opacity: 1;
+  animation:
+    gsceneCalloutEnterRight 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.2s backwards,
+    gsceneCalloutFloat 3.8s ease-in-out 0.9s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gscene-float-callout,
+  .gscene-progression-cream.is-visible .gscene-float-callout--left,
+  .gscene-progression-cream.is-visible .gscene-float-callout--right {
+    opacity: 1;
+    transform: none;
+    animation: none !important;
+  }
+}
+
+@media (min-width: 960px) {
+  .gscene-float-callout {
+    position: absolute;
+    margin-bottom: 0;
+    z-index: 4;
+  }
+  .gscene-float-callout--left {
+    left: 20px;
+    top: 64px;
+  }
+  .gscene-float-callout--right {
+    right: 20px;
+    top: 148px;
+  }
+}
+
+.gscene-plum-ribbon {
+  width: 100%;
+  background: var(--gs-plum);
+  color: #FFFFFF;
+  border-radius: 28px 28px 0 0;
+  padding: 36px 24px;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+  margin-top: -8px;
+}
+
+@media (min-width: 768px) {
+  .gscene-plum-ribbon {
+    padding: 44px 48px;
+  }
+}
+
+/* ==========================================================================
+   SCENE 5 — SIMPLE FOR THE BUSINESS (GRÜN PLUM & LAVENDER PALETTE — NO BLACK/GREEN)
+   ========================================================================== */
+.gscene-counter-modes {
+  background: var(--gs-white);
+  padding: 84px 0;
+}
+
+@media (min-width: 960px) {
+  .gscene-counter-modes {
+    padding: 112px 0;
+  }
+}
+
+@property --gs-neon-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes gsceneBorderOrbit {
+  to {
+    --gs-neon-angle: 360deg;
+  }
+}
+
+.gscene-modes-split {
+  position: relative;
+  z-index: 1;
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+@media (min-width: 960px) {
+  .gscene-modes-split {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+}
+
+.gscene-mode-stage {
+  position: relative;
+  z-index: 1;
+  border-radius: 32px;
+  padding: 36px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gscene-mode-stage::before {
+  content: '';
+  position: absolute;
+  inset: -1.5px;
+  border-radius: 33.5px;
+  padding: 2.5px;
+  background: conic-gradient(
+    from var(--gs-neon-angle),
+    transparent 0deg,
+    transparent 230deg,
+    rgba(192, 38, 211, 0.5) 275deg,
+    #E879F9 315deg,
+    #F472B6 340deg,
+    transparent 360deg
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.72;
+  animation: gsceneBorderOrbit 4.2s linear infinite;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.gscene-mode-stage--plum-brand::before {
+  animation-delay: -2.1s;
+}
+
+.gscene-mode-stage:hover {
+  transform: translateY(-8px);
+}
+
+.gscene-mode-stage:hover::before {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gscene-mode-stage::before {
+    animation: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .gscene-mode-stage {
+    padding: 44px 40px;
+  }
+}
+
+/* Mode A: Warm Lavender Stage */
+.gscene-mode-stage--lavender {
+  background: var(--gs-lavender);
+  color: var(--gs-ink);
+  border: 1px solid rgba(117, 30, 104, 0.14);
+  box-shadow: 0 14px 32px -18px rgba(117, 30, 104, 0.16);
+}
+
+.gscene-mode-stage--lavender:hover {
+  box-shadow: 0 24px 48px -18px rgba(117, 30, 104, 0.24);
+}
+
+/* Mode B: Authentic Grün Deep Plum Stage (replaces the off-brand black/neon-green card) */
+.gscene-mode-stage--plum-brand {
+  background: linear-gradient(155deg, #751E68 0%, #4E1145 100%);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 44px -18px rgba(117, 30, 104, 0.34);
+}
+
+.gscene-mode-stage--plum-brand:hover {
+  box-shadow: 0 28px 54px -16px rgba(117, 30, 104, 0.44);
+}
+
+/* ==========================================================================
+   SCENE 6 — THE BUSINESS CONTROL PANEL (Deep Plum-Obsidian Stage + Tablet)
+   ========================================================================== */
+.gscene-dashboard-obsidian {
+  background: var(--gs-plum-night);
+  color: #FFFFFF;
+  padding: 84px 0 96px;
+}
+
+@media (min-width: 960px) {
+  .gscene-dashboard-obsidian {
+    padding: 112px 0 124px;
+  }
+}
+
+.gscene-ipad-bezel {
+  max-width: 1020px;
+  margin: 0 auto;
+  background: #361431;
+  border-radius: 32px;
+  padding: 12px;
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.gscene-ipad-screen {
+  background: var(--gs-white);
+  color: var(--gs-ink);
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.gscene-ipad-topbar {
+  background: var(--gs-cream);
+  border-bottom: 1px solid var(--gs-line);
+  padding: 14px 22px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.gscene-dash-wrap {
+  padding: 20px 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #FCFAFC;
+}
+
+@media (min-width: 900px) {
+  .gscene-dash-wrap {
+    padding: 24px 26px 26px;
+    gap: 18px;
+  }
+}
+
+.gscene-dash-kpis {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .gscene-dash-kpis {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+.gscene-dash-kpi {
+  background: var(--gs-white);
+  border: 1px solid var(--gs-line);
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gscene-dash-kpi-lbl {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gs-ink-muted);
+}
+
+.gscene-dash-kpi-val {
+  font-family: var(--gs-font-display);
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--gs-ink);
+}
+
+.gscene-dash-kpi-sub {
+  font-size: 0.72rem;
+  color: var(--gs-ink-muted);
+}
+
+.gscene-dash-card {
+  background: var(--gs-white);
+  border: 1px solid var(--gs-line);
+  border-radius: 16px;
+  padding: 18px 20px;
+}
+
+.gscene-dash-chart-head,
+.gscene-dash-row-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.gscene-dash-card-title {
+  font-family: var(--gs-font-display);
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--gs-ink);
+}
+
+.gscene-dash-card-sub {
+  font-size: 0.76rem;
+  color: var(--gs-ink-muted);
+  margin-top: 2px;
+}
+
+.gscene-dash-tabs {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--gs-line);
+  background: #FAF8FA;
+}
+
+.gscene-dash-tab {
+  font-family: var(--gs-font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--gs-ink-soft);
+  padding: 5px 10px;
+  border-radius: 7px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.gscene-dash-tab:hover {
+  color: var(--gs-ink);
+}
+
+.gscene-dash-tab--active {
+  background: var(--gs-plum);
+  color: #FFFFFF;
+}
+
+.gscene-dash-tab--active:hover {
+  color: #FFFFFF;
+}
+
+.gscene-dash-bars {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+  align-items: end;
+}
+
+.gscene-dash-bar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.gscene-dash-bar-track {
+  width: 100%;
+  height: 128px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-bottom: 1px solid var(--gs-line);
+  padding-bottom: 8px;
+}
+
+.gscene-dash-bar {
+  width: 24px;
+  max-width: 72%;
+  border-radius: 6px 6px 2px 2px;
+  background: #7A246E;
+  transition: height 0.78s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.2s ease;
+}
+
+.gscene-dash-bar:hover {
+  background: #9B328C;
+}
+
+.gscene-dash-bar-lbl {
+  font-size: 0.68rem;
+  color: var(--gs-ink-muted);
+}
+
+.gscene-dash-bottom {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 820px) {
+  .gscene-dash-bottom {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.gscene-dash-channels {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.gscene-dash-ch-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  margin-bottom: 6px;
+}
+
+.gscene-dash-ch-meta strong {
+  font-weight: 600;
+  color: var(--gs-ink);
+}
+
+.gscene-dash-ch-meta span {
+  color: var(--gs-ink-muted);
+  font-weight: 500;
+}
+
+.gscene-dash-progress {
+  height: 8px;
+  border-radius: 999px;
+  background: #F4EEF3;
+  overflow: hidden;
+}
+
+.gscene-dash-progress span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gscene-dash-health-grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.gscene-dash-health-box {
+  border: 1px solid var(--gs-line);
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gscene-dash-health-box strong {
+  font-family: var(--gs-font-display);
+  font-size: 1.38rem;
+  font-weight: 700;
+  color: var(--gs-ink);
+  line-height: 1.15;
+}
+
+.gscene-dash-health-box small {
+  font-size: 0.7rem;
+  color: var(--gs-ink-muted);
+}
+
+.gscene-dash-health-foot {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--gs-line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 0.74rem;
+}
+
+.gscene-dash-health-foot span {
+  color: var(--gs-ink-muted);
+}
+
+.gscene-dash-health-foot strong {
+  color: var(--gs-ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ==========================================================================
+   SCENE 7 — PRICING ($500 MXN/MES), FAQ & CAMPAIGN CLOSING BANNER
+   ========================================================================== */
+.gscene-pricing-section {
+  background: var(--gs-cream);
+  padding: 84px 0 96px;
+}
+
+@media (min-width: 960px) {
+  .gscene-pricing-section {
+    padding: 112px 0 120px;
+  }
+}
+
+.gscene-price-card {
+  max-width: 960px;
+  margin: 0 auto;
+  background: var(--gs-white);
+  border: 2px solid var(--gs-plum);
+  border-radius: 32px;
+  padding: 36px 24px;
+  box-shadow: 0 28px 60px -24px rgba(117, 30, 104, 0.16);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+@media (min-width: 860px) {
+  .gscene-price-card {
+    padding: 48px 52px;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 48px;
+  }
+}
+
+.gscene-price-big {
+  font-family: var(--gs-font-display);
+  font-size: clamp(3rem, 5vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--gs-ink);
+}
+
+.gscene-price-big span {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--gs-ink-muted);
+  letter-spacing: 0;
+}
+
+.gscene-faq-wrap {
+  max-width: 860px;
+  margin: 72px auto 0;
+}
+
+.gscene-faq-item {
+  border-bottom: 1px solid var(--gs-line);
+}
+
+.gscene-faq-btn {
+  width: 100%;
+  text-align: left;
+  padding: 20px 0;
+  background: transparent;
+  border: none;
+  font-family: var(--gs-font-display);
+  font-size: 1.04rem;
+  font-weight: 600;
+  color: var(--gs-ink);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.gscene-faq-ans {
+  padding-bottom: 20px;
+  font-size: 0.95rem;
+  color: var(--gs-ink-soft);
+  line-height: 1.6;
+}
+
+.gscene-closing-campaign {
+  background: var(--gs-plum);
+  color: #FFFFFF;
+  border-radius: 32px;
+  padding: 44px 24px;
+  margin-top: 72px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+@media (min-width: 860px) {
+  .gscene-closing-campaign {
+    padding: 56px 60px;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+  }
+}
+
+.gscene-footer {
+  background: var(--gs-plum-night);
+  color: #C7B8C5;
+  padding: 44px 0 52px;
+  font-size: 0.88rem;
+}
+
+.gscene-footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.gscene-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.gscene-footer-links a {
+  color: #EADCE8;
+  text-decoration: none;
+}
+
+.gscene-footer-links a:hover {
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   MULTI-DEVICE RESPONSIVE REFINEMENTS (Compact Phones, iPad Portrait & Landscape)
+   ========================================================================== */
+
+/* Compact Mobile (< 430px: 360px Android, 375px iPhone SE, 390px iPhone) */
+@media (max-width: 429px) {
+  .gscene-container {
+    padding: 0 16px;
+  }
+
+  .gscene-nav-row {
+    height: 64px;
+    gap: 10px;
+  }
+
+  .gscene-nav-cta {
+    gap: 10px;
+  }
+
+  .gscene-signin {
+    font-size: 0.8rem;
+  }
+
+  .gscene-header .gscene-btn-ink {
+    height: 38px;
+    padding: 0 14px;
+    font-size: 0.78rem;
+  }
+
+  .gscene-hero {
+    padding: 24px 0 52px;
+  }
+
+  .gscene-hero-h1 {
+    font-size: 2.05rem;
+  }
+
+  .gscene-hero-cta-row {
+    margin-top: 22px;
+    gap: 14px;
+  }
+
+  .gscene-btn-ink--lg {
+    width: 100%;
+    height: 50px;
+  }
+
+  .gscene-enroll-card {
+    padding: 22px 14px;
+    border-radius: 26px;
+    gap: 28px;
+  }
+
+  .gscene-counter-stage {
+    padding: 18px 12px;
+    border-radius: 22px;
+    min-height: auto;
+  }
+
+  .gscene-prewallet-phone {
+    padding: 16px 14px;
+    border-radius: 22px;
+  }
+
+  .gscene-mode-stage {
+    padding: 26px 18px;
+    border-radius: 24px;
+  }
+
+  .gscene-pricing-card {
+    padding: 26px 18px;
+    border-radius: 24px;
+  }
+}
+
+/* Very narrow phones (< 390px: 360px Android & 375px iPhone SE) */
+@media (max-width: 389px) {
+  .gscene-real-iphone,
+  .gscene-wallet-iphone,
+  .gscene-lockscreen-iphone-crop {
+    transform: scale(0.9);
+    transform-origin: top center;
+  }
+
+  .gscene-real-iphone {
+    margin-bottom: -44px;
+  }
+
+  .gscene-wallet-iphone {
+    margin-bottom: -38px;
+  }
+
+  .gscene-lockscreen-iphone-crop {
+    margin-bottom: -42px;
+  }
+}
+
+.gscene-hero-h1-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .gscene-hero-h1-desktop {
+    display: none;
+  }
+
+  .gscene-hero-h1-mobile {
+    display: inline;
+  }
+
+  .gscene-hero-grid {
+    gap: 20px;
+  }
+
+  .gscene-hero-copy {
+    display: contents;
+  }
+
+  .gscene-hero-head-group {
+    order: 1;
+    text-align: center;
+  }
+
+  .gscene-hero-lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .gscene-hero-phone-col {
+    order: 2;
+  }
+
+  .gscene-hero-actions-group {
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin-top: 2px;
+  }
+
+  .gscene-hero-composition {
+    min-height: auto;
+    padding: 4px 0 0;
+  }
+
+  .gscene-real-iphone {
+    height: 372px;
+  }
+
+  .gscene-hero-switcher {
+    display: none !important;
+  }
+
+  .gscene-wallet-badges {
+    margin-top: 0;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .gscene-wallet-badges-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+    max-width: 320px;
+    align-items: center;
+  }
+
+  .gscene-wallet-badges-row img:first-child {
+    justify-self: end;
+  }
+
+  .gscene-wallet-badges-row img:last-child {
+    justify-self: start;
+  }
+
+  .gscene-hero-cta-row {
+    margin-top: 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+@keyframes gsceneMobileNotifDrop {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.94);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+  .gscene-counter-stage {
+    display: none;
+  }
+
+  .gscene-float-callout {
+    display: none !important;
+  }
+
+  .gscene-lock-notif {
+    opacity: 0;
+  }
+
+  .gscene-progression-cream.is-visible .gscene-lock-notif--2 {
+    animation: gsceneMobileNotifDrop 0.6s cubic-bezier(0.22, 1.24, 0.36, 1) 0.12s both;
+  }
+
+  .gscene-progression-cream.is-visible .gscene-lock-notif--1 {
+    animation: gsceneMobileNotifDrop 0.62s cubic-bezier(0.22, 1.24, 0.36, 1) 0.42s both;
+  }
+
+  .gscene-mode-stage--plum-brand {
+    display: none;
+  }
+
+  /* Tighten vertical section spacing on mobile */
+  .gscene-enrollment-lavender {
+    padding: 40px 0;
+  }
+
+  .gscene-progression-cream {
+    padding: 48px 0 0;
+  }
+
+  .gscene-counter-modes {
+    padding: 48px 0;
+  }
+
+  .gscene-dashboard-obsidian {
+    padding: 52px 0 56px;
+  }
+
+  .gscene-pricing-section {
+    padding: 52px 0 60px;
+  }
+
+  .gscene-scene-head-center {
+    margin-bottom: 30px;
+  }
+
+  /* Compact Dashboard on Mobile (avoid tall vertical stretch) */
+  .gscene-ipad-bezel {
+    padding: 8px;
+    border-radius: 22px;
+  }
+
+  .gscene-ipad-screen {
+    border-radius: 16px;
+  }
+
+  .gscene-ipad-topbar {
+    padding: 10px 14px;
+  }
+
+  .gscene-dash-wrap {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .gscene-dash-kpis {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .gscene-dash-kpi {
+    padding: 9px 10px;
+    border-radius: 10px;
+    gap: 2px;
+  }
+
+  .gscene-dash-kpi:nth-child(4) {
+    grid-column: span 1;
+  }
+
+  .gscene-dash-kpi:last-child {
+    grid-column: span 2;
+  }
+
+  .gscene-dash-kpi-lbl {
+    font-size: 0.54rem;
+  }
+
+  .gscene-dash-kpi-val {
+    font-size: 1.15rem;
+  }
+
+  .gscene-dash-kpi-sub {
+    font-size: 0.62rem;
+  }
+
+  .gscene-dash-card {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .gscene-dash-card-title {
+    font-size: 0.84rem;
+  }
+
+  .gscene-dash-card-sub {
+    font-size: 0.68rem;
+  }
+
+  .gscene-dash-tabs {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .gscene-dash-tab {
+    font-size: 0.64rem;
+    padding: 4px 7px;
+  }
+
+  .gscene-dash-bars {
+    margin-top: 12px;
+    gap: 6px;
+  }
+
+  .gscene-dash-bar-track {
+    height: 72px;
+    padding-bottom: 5px;
+  }
+
+  .gscene-dash-bar {
+    width: 18px;
+  }
+
+  .gscene-dash-bar-lbl {
+    font-size: 0.6rem;
+  }
+
+  .gscene-dash-bottom {
+    gap: 10px;
+  }
+
+  .gscene-dash-channels {
+    margin-top: 10px;
+    gap: 8px;
+  }
+
+  .gscene-dash-ch-meta {
+    font-size: 0.7rem;
+    margin-bottom: 4px;
+  }
+
+  .gscene-dash-health-grid {
+    margin-top: 10px;
+    gap: 8px;
+  }
+
+  .gscene-dash-health-box {
+    padding: 9px 10px;
+  }
+
+  .gscene-dash-health-box strong {
+    font-size: 1.12rem;
+  }
+
+  .gscene-dash-health-foot {
+    margin-top: 10px;
+    padding-top: 8px;
+    font-size: 0.68rem;
+  }
+}
+
+/* iPad Portrait & Mid-Tablets (768px – 959px) */
+@media (min-width: 768px) and (max-width: 959px) {
+  .gscene-container {
+    padding: 0 32px;
+  }
+
+  .gscene-cropped-phone-stage {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 20px;
+    align-items: start;
+    max-width: 680px;
+  }
+
+  .gscene-float-callout {
+    max-width: none;
+    margin-bottom: 0;
+  }
+
+  .gscene-lockscreen-iphone-crop {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-top: 8px;
+  }
+
+  .gscene-modes-split {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .gscene-mode-stage {
+    padding: 28px 22px;
+    border-radius: 26px;
+  }
+
+  .gscene-pricing-card {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    padding: 36px 32px;
+    gap: 28px;
+  }
+}
+
+/* iPad Landscape & Compact Laptops (1024px – 1160px) */
+@media (min-width: 1024px) and (max-width: 1160px) {
+  .gscene-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    gap: 24px;
+  }
+
+  .gscene-hero-composition {
+    transform: scale(0.86);
+    transform-origin: center right;
+    min-height: 500px;
+  }
+
+  .gscene-floating-notif {
+    position: absolute;
+    left: 0;
+    bottom: 14px;
+    width: 320px;
+    max-width: 320px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gscene-page *,
+  .gscene-page *::before,
+  .gscene-page *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

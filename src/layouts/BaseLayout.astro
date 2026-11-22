@@ -1,0 +1,85 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  isMarketing?: boolean;
+  hideChrome?: boolean;
+}
+
+const {
+  title = 'Grün Loyalty: Tarjetas de lealtad digitales para negocios locales · Grün Loyalty',
+  description = 'Tarjetas de lealtad digitales para cafeterías y negocios locales, entregadas en Apple Wallet y Google Wallet sin descargar apps.',
+  isMarketing = true,
+  hideChrome = false,
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html
+  lang="es"
+  class="rethink_sans_9a59ba61-module__hHy6LW__variable space_grotesk_d7b50fc5-module__qeW00a__variable jetbrains_mono_7d65b77b-module__VxV-Ta__variable h-full antialiased"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href="/media/0c89a48fa5027cee-s.p.1ii7211jqpzi_.woff2" as="font" crossorigin="" type="font/woff2" />
+    <link rel="preload" href="/media/0dc02305a3505331-s.p.0h26ch5typlyx.woff2" as="font" crossorigin="" type="font/woff2" />
+    <link rel="preload" href="/media/70bc3e132a0a741e-s.p.269kn9uafm0ti.woff2" as="font" crossorigin="" type="font/woff2" />
+    <link rel="preload" href="/grun-logo-loyalty.png" as="image" />
+    <link rel="stylesheet" href="/css1.css" />
+    <link rel="stylesheet" href="/css2.css" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="shortcut icon" href="/grun-logo-loyalty.png?v=grun2" />
+    <link rel="icon" href="/grun-logo-loyalty.png?v=grun2" />
+  </head>
+  <body class="min-h-full flex flex-col">
+    {hideChrome ? (
+      <slot />
+    ) : (
+      <div class={`${isMarketing ? 'mk ' : ''}flex flex-1 flex-col overflow-x-clip`}>
+        <header class="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-5">
+          <a class="flex items-center gap-2" href="/">
+            <img
+              src="/grun-logo-loyalty.png"
+              alt="Grün Loyalty"
+              class="h-6 w-6 text-accent object-contain rounded-md"
+            />
+            <span class="text-lg font-semibold tracking-tight text-ink">Grün</span>
+          </a>
+          <div class="flex items-center gap-6">
+            {isMarketing && (
+              <nav class="hidden sm:flex items-center gap-5 text-sm text-ink-soft">
+                <a href="#como-funciona" class="transition-colors hover:text-ink">Cómo funciona</a>
+                <a href="#precios" class="transition-colors hover:text-ink">Precio</a>
+                <a href="#faq" class="transition-colors hover:text-ink">Dudas</a>
+              </nav>
+            )}
+            <a
+              class="text-sm font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-ink"
+              href="/login"
+            >
+              Iniciar sesión
+            </a>
+          </div>
+        </header>
+
+        <main class="flex-1">
+          <slot />
+        </main>
+
+        <footer class="no-print border-t border-line">
+          <div class="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-2 px-5 py-8 text-sm text-ink-muted">
+            <p>© 2026 Grün · Desarrollado en México</p>
+            <nav class="flex gap-5">
+              <a class="transition-colors hover:text-ink" href="/privacy">Privacidad</a>
+              <a class="transition-colors hover:text-ink" href="/terms">Términos</a>
+              <a class="transition-colors hover:text-ink" href="/login">Iniciar sesión</a>
+            </nav>
+          </div>
+        </footer>
+      </div>
+    )}
+  </body>
+</html>

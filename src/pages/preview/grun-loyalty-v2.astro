@@ -1,0 +1,675 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import GrunLoyaltyV2Interactive from '../../components/GrunLoyaltyV2Interactive';
+import '../../styles/grun-loyalty-v2.css';
+---
+
+<BaseLayout
+  title="Grün Loyalty · Tarjetas de lealtad digitales en Apple Wallet y Google Wallet"
+  description="Tarjetas de lealtad digitales para que tus clientes lleven tu marca en su teléfono. Directo en Apple Wallet y Google Wallet sin instalar aplicaciones."
+  isMarketing={false}
+  hideChrome={true}
+>
+  <div class="gscene-page">
+    <a href="#escena-wallet" class="gscene-skip">Saltar al contenido principal</a>
+
+    <!-- ===================================================================
+         MINIMAL HEADER NAVIGATION
+         Left: Logo only (no "Grün" text). Right: Iniciar sesión + Configura tu negocio.
+         =================================================================== -->
+    <header class="gscene-header">
+      <div class="gscene-container gscene-nav-row">
+        <a href="/preview/grun-loyalty-v2" class="gscene-logo-link" aria-label="Inicio">
+          <img
+            src="/grun-logo-loyalty.png"
+            alt="Logo"
+            width="34"
+            height="34"
+            class="gscene-logo-img"
+            fetchpriority="high"
+          />
+        </a>
+
+        <div class="gscene-nav-cta">
+          <a href="/login" class="gscene-signin">Iniciar sesión</a>
+          <a href="/login" class="gscene-btn-ink">Configura tu negocio</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="escena-wallet">
+      <!-- ===================================================================
+           SCENE 1 — THE WALLET (HERO CAMPAIGN COMPOSITION)
+           Real iPhone Mockup + 3 Overlapping Wallet Passes + Official Wallet Badges
+           =================================================================== -->
+      <section class="gscene-hero">
+        <div class="gscene-container gscene-hero-grid">
+          <div class="gscene-hero-copy">
+            <div class="gscene-hero-head-group">
+              <h1 class="gscene-hero-h1">
+                <span class="gscene-hero-h1-desktop">
+                  Tarjetas de lealtad digitales para que tus clientes lleven tu marca en su teléfono.
+                </span>
+                <span class="gscene-hero-h1-mobile">
+                  Tarjetas de lealtad en su teléfono.
+                </span>
+              </h1>
+
+              <p class="gscene-hero-lead">
+                Sin descargar aplicaciones ni tarjetas de cartón que se pierden. Tus clientes escanean tu QR en mostrador, guardan su pase en Apple Wallet o Google Wallet y regresan por su recompensa.
+              </p>
+            </div>
+
+            <div class="gscene-hero-actions-group">
+              <!-- Official Apple Wallet & Google Wallet Badges -->
+              <div class="gscene-wallet-badges">
+                <span class="gscene-wallet-badges-title">Integrado con</span>
+                <div class="gscene-wallet-badges-row">
+                  <img
+                    src="/apple-wallet-badge.svg"
+                    alt="Add to Apple Wallet"
+                    width="126"
+                    height="40"
+                    class="gscene-official-wallet-img"
+                  />
+                  <img
+                    src="/google-wallet-badge.svg"
+                    alt="Add to Google Wallet"
+                    width="142"
+                    height="40"
+                    class="gscene-official-wallet-img"
+                  />
+                </div>
+              </div>
+
+              <div class="gscene-hero-cta-row">
+                <a href="/login" class="gscene-btn-ink gscene-btn-ink--lg">
+                  Configura tu negocio
+                </a>
+                <a
+                  href="#escena-qr"
+                  style="font-weight: 600; font-size: 0.96rem; color: var(--gs-ink-soft); text-decoration: underline; text-underline-offset: 5px;"
+                >
+                  Ver cómo funciona
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Real iPhone Hardware Frame + Multi-Pass Wallet Stage -->
+          <div class="gscene-hero-phone-col">
+            <GrunLoyaltyV2Interactive mode="hero" client:load />
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SCENE 2 — YOUR BRAND, IN THEIR WALLET
+           Three Realistic Digital Passes (Pure QR at bottom, zero letters inside QR card)
+           =================================================================== -->
+      <section id="escena-marcas" class="gscene-showcase-plum">
+        <div class="gscene-container">
+          <div class="gscene-scene-head-center">
+            <h2 class="gscene-display-h2">
+              Tu identidad, tus colores y tu recompensa dentro de su Wallet.
+            </h2>
+            <p class="gscene-display-sub">
+              Cada negocio personaliza su tarjeta digital con su propio logotipo, regla de sellos, sucursal y recompensa. Así se ven tres comercios reales dentro del teléfono de sus clientes.
+            </p>
+          </div>
+
+          <GrunLoyaltyV2Interactive mode="wallet" client:visible />
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SCENE 3 — FROM QR TO WALLET (VISUAL ENROLLMENT STORY)
+           =================================================================== -->
+      <section id="escena-qr" class="gscene-enrollment-lavender">
+        <div class="gscene-container">
+          <div class="gscene-enroll-card">
+            <!-- Left Visual Scene: Pre-Wallet Enrollment Screen (Casa Anís) -->
+            <div class="gscene-counter-stage" aria-label="Pantalla previa antes de guardar la tarjeta en Wallet">
+              <div class="gscene-prewallet-phone">
+                <div class="gscene-prewallet-header">
+                  <span class="gscene-prewallet-badge" aria-hidden="true">CA</span>
+                  <div>
+                    <p class="gscene-prewallet-bname">Casa Anís</p>
+                    <p class="gscene-prewallet-bsub">Tarjeta de lealtad digital</p>
+                  </div>
+                </div>
+
+                <p class="gscene-prewallet-loc">
+                  <span style="color: #F85C00;" aria-hidden="true">📍</span>
+                  Colonia Americana · GDL
+                </p>
+
+                <div class="gscene-prewallet-card" style="background: linear-gradient(155deg, #F85C00 0%, #D94800 100%); box-shadow: 0 14px 28px -10px rgba(217, 72, 0, 0.42);">
+                  <div class="gscene-prewallet-card-top">
+                    <div>
+                      <span class="gscene-prewallet-eyebrow">ACUMULA 5 SELLOS</span>
+                      <p class="gscene-prewallet-reward">Postre o cóctel de autor Gratis</p>
+                    </div>
+                    <div class="gscene-prewallet-count">
+                      <strong>0<span>/5</span></strong>
+                      <small>SELLOS</small>
+                    </div>
+                  </div>
+
+                  <div class="gscene-prewallet-tray">
+                    <div class="gscene-prewallet-circles">
+                      {Array.from({ length: 5 }).map(() => (
+                        <span class="gscene-prewallet-circle" />
+                      ))}
+                    </div>
+                    <p class="gscene-prewallet-tray-note">
+                      Tu tarjeta inicia vacía. Recibe tu primer sello con tu próxima compra.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="gscene-prewallet-actions">
+                  <p class="gscene-prewallet-welcome">¡Bienvenido de vuelta!</p>
+                  <p class="gscene-prewallet-desc">
+                    Ya tienes una tarjeta guardada aquí. Ábrela o agrégala a tu wallet.
+                  </p>
+
+                  <div class="gscene-prewallet-btn">Ver mi tarjeta</div>
+
+                  <img
+                    src="/apple-wallet-badge.svg"
+                    alt="Add to Apple Wallet"
+                    width="136"
+                    height="42"
+                    class="gscene-prewallet-apple"
+                  />
+
+                  <p class="gscene-prewallet-foot">
+                    <span class="gscene-prewallet-dot" aria-hidden="true" />
+                    Muestra tu código QR en el mostrador para recibir tu sello.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Editorial Stepper: "Así lo vive tu cliente" -->
+            <div>
+              <h2
+                style="font-family: var(--gs-font-display); font-size: clamp(1.95rem, 3.2vw, 2.75rem); font-weight: 600; line-height: 1.08; letter-spacing: -0.025em; margin-bottom: 32px;"
+              >
+                Así lo vive tu cliente en el mostrador.
+              </h2>
+
+              <div class="gscene-stepper-list">
+                <div class="gscene-stepper-item gscene-stepper-item--highlight">
+                  <span class="gscene-stepper-num">01</span>
+                  <div>
+                    <h3 class="gscene-stepper-title">Escanea tu QR en caja.</h3>
+                    <p class="gscene-stepper-desc">
+                      Grün genera automáticamente el cartel con tu marca listo para imprimir y colocar junto a tu terminal de cobro.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="gscene-stepper-item">
+                  <span class="gscene-stepper-num">02</span>
+                  <div>
+                    <h3 class="gscene-stepper-title">La guarda en 5 segundos.</h3>
+                    <p class="gscene-stepper-desc">
+                      Sin bajar aplicaciones de 100&nbsp;MB ni crear contraseñas. Un toque y la tarjeta queda dentro de Apple Wallet, Google Wallet o su navegador web.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="gscene-stepper-item">
+                  <span class="gscene-stepper-num">03</span>
+                  <div>
+                    <h3 class="gscene-stepper-title">Suma sellos en cada visita.</h3>
+                    <p class="gscene-stepper-desc">
+                      En dos segundos su pase se actualiza en vivo con notificación push cada vez que compra en tu local.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="gscene-stepper-item">
+                  <span class="gscene-stepper-num">04</span>
+                  <div>
+                    <h3 class="gscene-stepper-title">Regresa por su recompensa.</h3>
+                    <p class="gscene-stepper-desc">
+                      Al completar la meta, canjeas su premio en caja con un toque y la tarjeta se reinicia sola para volver a empezar.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top: 36px;">
+                <a href="/login" class="gscene-btn-ink gscene-btn-ink--lg">
+                  Crear mi tarjeta ahora
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SCENE 4 — EVERY VISIT COUNTS (REAL IPHONE FRAME WITH BRIGHT LOCKSCREEN)
+           =================================================================== -->
+      <section id="escena-sellos" class="gscene-progression-cream">
+        <div class="gscene-container">
+          <div class="gscene-scene-head-center">
+            <h2 class="gscene-display-h2" style="color: var(--gs-ink);">
+              Cada visita suma. Cada sello se siente en su pantalla.
+            </h2>
+            <p class="gscene-display-sub" style="color: var(--gs-ink-soft);">
+              A diferencia de un cartoncillo olvidado en un cajón, tu tarjeta digital vive en la pantalla de bloqueo de tu cliente y le muestra exactamente cuánto le falta para su premio.
+            </p>
+          </div>
+
+          <div class="gscene-cropped-phone-stage">
+            <!-- Left Floating Glass Callout: Push Update -->
+            <div class="gscene-float-callout gscene-float-callout--left">
+              <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.74rem; color: var(--gs-plum); font-weight: 700;">
+                <span>NOTIFICACIÓN PUSH EN VIVO</span>
+                <span>2 seg</span>
+              </div>
+              <p style="font-family: var(--gs-font-display); font-size: 1.45rem; font-weight: 700; margin-top: 6px; line-height: 1.15;">
+                +1 sello registrado
+              </p>
+              <p style="font-size: 0.86rem; color: var(--gs-ink-soft); margin-top: 6px; line-height: 1.45;">
+                Cuando el empleado sella en mostrador, el pase del cliente se actualiza al instante en su teléfono.
+              </p>
+            </div>
+
+            <!-- Right Floating Glass Callout: Reward Unlocked -->
+            <div class="gscene-float-callout gscene-float-callout--right">
+              <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.74rem; color: var(--gs-plum); font-weight: 700;">
+                <span>META COMPLETADA</span>
+                <span>10 / 10</span>
+              </div>
+              <p style="font-family: var(--gs-font-display); font-size: 1.45rem; font-weight: 700; margin-top: 6px; line-height: 1.15;">
+                ¡Premio listo!
+              </p>
+              <p style="font-size: 0.86rem; color: var(--gs-ink-soft); margin-top: 6px; line-height: 1.45;">
+                El cliente ve su recompensa activa en pantalla y vuelve a tu negocio para canjearla.
+              </p>
+            </div>
+
+            <!-- Center Cropped Real iPhone Hardware Frame with Luminous Lockscreen Wallpaper -->
+            <div class="gscene-lockscreen-iphone-crop" aria-label="iPhone real mostrando pantalla de bloqueo con notificaciones de sellos">
+              <div class="gscene-lockscreen-iphone-inner">
+                <img
+                  src="/iphone-frame-real.png"
+                  alt=""
+                  width="400"
+                  height="817"
+                  class="gscene-real-iphone-chassis"
+                  aria-hidden="true"
+                />
+
+                <div class="gscene-lockscreen-screen-bright">
+                  <div class="gscene-real-status-row" aria-hidden="true">
+                    <span>9:41</span>
+                    <div class="gscene-real-dynamic-island">
+                      <span class="gscene-real-camera-dot" />
+                    </div>
+                    <span style="font-size: 0.68rem;">5G</span>
+                  </div>
+
+                  <div style="text-align: center; margin: 12px 0 18px; color: #2D0B28;">
+                    <p style="font-size: 0.78rem; font-weight: 600; opacity: 0.85;">Martes, 14 de noviembre</p>
+                    <p style="font-family: var(--gs-font-display); font-size: 3.35rem; font-weight: 700; line-height: 1; letter-spacing: -0.04em; margin-top: 2px;">
+                      9:41
+                    </p>
+                  </div>
+
+                  <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <div
+                      class="gscene-lock-notif gscene-lock-notif--1"
+                      style="background: rgba(255, 255, 255, 0.96); color: #121212; border-radius: 18px; padding: 12px 13px; box-shadow: 0 10px 24px rgba(45, 11, 40, 0.18); display: flex; align-items: center; gap: 10px;"
+                    >
+                      <img src="/grun-logo-loyalty.png" alt="" width="34" height="34" style="border-radius: 8px; flex-shrink: 0;" />
+                      <div style="flex: 1; min-width: 0;">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.7rem;">
+                          <strong>LORETTE CAFÉ</strong>
+                          <span style="color: #751E68; font-weight: 700;">ahora</span>
+                        </div>
+                        <p style="font-size: 0.75rem; color: #3A363D; margin-top: 2px; line-height: 1.3;">
+                          ¡Sumaste tu sello #10! Tienes una bebida gratis lista para canjear.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="gscene-lock-notif gscene-lock-notif--2"
+                      style="background: rgba(255, 255, 255, 0.94); color: #121212; border-radius: 18px; padding: 11px 13px; box-shadow: 0 8px 20px rgba(45, 11, 40, 0.14); display: flex; align-items: center; gap: 10px;"
+                    >
+                      <span
+                        style="width: 34px; height: 34px; border-radius: 8px; background: #2D1F3B; color: #E8D8F8; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.78rem; flex-shrink: 0;"
+                      >
+                        NS
+                      </span>
+                      <div style="flex: 1; min-width: 0;">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.7rem;">
+                          <strong>NOBLE STUDIO</strong>
+                          <span style="color: #6E6A73;">ayer</span>
+                        </div>
+                        <p style="font-size: 0.74rem; color: #3A363D; margin-top: 2px; line-height: 1.3;">
+                          Llevas 6 de 8 sellos. ¡Te esperamos para tu próximo corte!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="gscene-plum-ribbon">
+              <p
+                style="font-family: var(--gs-font-display); font-size: clamp(1.65rem, 3vw, 2.45rem); font-weight: 600; line-height: 1.1;"
+              >
+                Sin instalar aplicaciones. Listo en menos de 2 minutos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SCENE 5 — SIMPLE FOR THE BUSINESS (NO PILL BUBBLES ABOVE HEADINGS)
+           =================================================================== -->
+      <section id="escena-mostrador" class="gscene-counter-modes">
+        <div class="gscene-container">
+          <div class="gscene-scene-head-center" style="margin-bottom: 20px;">
+            <h2 class="gscene-display-h2">
+              Tú escaneas con PIN, o ellos escanean en caja.
+            </h2>
+            <p class="gscene-display-sub" style="color: var(--gs-ink-soft);">
+              Grün Loyalty incluye dos modalidades de sellado para adaptarse al ritmo de tu mostrador sin comprar equipos adicionales.
+            </p>
+          </div>
+
+          <div class="gscene-modes-split">
+            <!-- MODE A: EMPLOYEE SCANNER WITH 6-DIGIT PIN (No pill bubble) -->
+            <article class="gscene-mode-stage gscene-mode-stage--lavender">
+              <div>
+                <h3
+                  style="font-family: var(--gs-font-display); font-size: clamp(1.45rem, 2.2vw, 1.95rem); font-weight: 600; line-height: 1.18;"
+                >
+                  Tu personal sella en 2 segundos desde cualquier celular.
+                </h3>
+                <p style="margin-top: 10px; font-size: 0.96rem; color: var(--gs-ink-soft); line-height: 1.55;">
+                  Tus empleados entran al enlace de escáner con un PIN de 6 dígitos sin crear cuentas. Apuntan la cámara al QR del cliente y tocan <strong>+1 sello</strong> o <strong>Canjear</strong>. Si alguien deja de laborar contigo, cambias el PIN en tu panel y las sesiones se cierran al instante.
+                </p>
+              </div>
+
+              <!-- Visual Artifact: Authentic Staff Scanner UI -->
+              <div
+                style="background: var(--gs-white); border: 1px solid rgba(117,30,104,0.18); border-radius: 24px; padding: 22px; box-shadow: 0 18px 36px -14px rgba(117,30,104,0.14);"
+                aria-label="Interfaz del escáner de empleado"
+              >
+                <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid var(--gs-line);">
+                  <div>
+                    <span style="font-size: 0.68rem; color: var(--gs-ink-muted); display: block; font-weight: 600;">TARJETA ESCANEADA</span>
+                    <strong style="font-family: var(--gs-font-mono); font-size: 1rem; letter-spacing: 0.14em;">ABCD-2345</strong>
+                  </div>
+                  <div style="text-align: right;">
+                    <span style="font-size: 0.68rem; color: var(--gs-ink-muted); display: block; font-weight: 600;">SALDO ACTUAL</span>
+                    <strong style="font-family: var(--gs-font-display); font-size: 1.45rem; color: var(--gs-plum);">6 <span style="font-size: 0.88rem; color: var(--gs-ink-muted);">/ 10</span></strong>
+                  </div>
+                </div>
+
+                <div style="margin: 16px 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; justify-items: center;">
+                  {Array.from({ length: 10 }).map((_, idx) => (
+                    <span
+                      style={{
+                        width: '32px',
+                        height: '32px',
+                        borderRadius: '999px',
+                        background: idx < 6 ? '#751E68' : 'transparent',
+                        border: `2px solid ${idx < 6 ? '#751E68' : 'rgba(117,30,104,0.28)'}`,
+                        color: '#FFFFFF',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontSize: '0.78rem',
+                        fontWeight: 700,
+                      }}
+                    >
+                      {idx < 6 ? '✓' : ''}
+                    </span>
+                  ))}
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                  <span
+                    style="height: 44px; border-radius: 999px; background: var(--gs-plum); color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-weight: 600; font-size: 0.88rem;"
+                  >
+                    +1 sello
+                  </span>
+                  <span
+                    style="height: 44px; border-radius: 999px; border: 1px solid var(--gs-line); color: var(--gs-ink-muted); display: inline-flex; align-items: center; justify-content: center; font-weight: 600; font-size: 0.88rem;"
+                  >
+                    Canjear premio
+                  </span>
+                </div>
+              </div>
+            </article>
+
+            <!-- MODE B: CUSTOMER SELF-SCANNING (No pill bubble) -->
+            <article class="gscene-mode-stage gscene-mode-stage--plum-brand">
+              <div>
+                <h3
+                  style="font-family: var(--gs-font-display); font-size: clamp(1.45rem, 2.2vw, 1.95rem); font-weight: 600; line-height: 1.18; color: #FFFFFF;"
+                >
+                  El cliente escanea el QR de tu mostrador al pagar.
+                </h3>
+                <p style="margin-top: 10px; font-size: 0.96rem; color: rgba(255, 255, 255, 0.88); line-height: 1.55;">
+                  Ideal para barras con fila rápida. El cliente apunta su cámara al cartel QR de caja al terminar su pago y suma su sello sin ocupar las manos de tu cajero, protegido con bloqueo automático de tiempo para impedir sellos duplicados.
+                </p>
+              </div>
+
+              <!-- Visual Artifact: Clean White Wallet Confirmation Card on Plum Stage -->
+              <div
+                style="background: var(--gs-white); color: var(--gs-ink); border-radius: 24px; padding: 22px; box-shadow: 0 18px 36px -14px rgba(18, 6, 16, 0.35);"
+                aria-label="Confirmación de auto-escaneo con bloqueo antifraude"
+              >
+                <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid var(--gs-line);">
+                  <span style="font-size: 0.74rem; color: var(--gs-plum); font-weight: 700;">
+                    ● Protección antifraude activa
+                  </span>
+                  <span style="font-family: var(--gs-font-mono); font-size: 0.74rem; color: var(--gs-ink-muted); font-weight: 600;">
+                    8 / 10 sellos
+                  </span>
+                </div>
+
+                <div
+                  style="margin-top: 14px; padding: 14px 16px; border-radius: 16px; background: var(--gs-lavender); display: flex; align-items: center; gap: 14px;"
+                >
+                  <span
+                    style="width: 40px; height: 40px; border-radius: 99px; background: var(--gs-plum); color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; flex-shrink: 0;"
+                  >
+                    ✓
+                  </span>
+                  <div>
+                    <p style="font-weight: 700; font-size: 0.95rem; color: var(--gs-ink);">
+                      Sello #8 registrado en mostrador
+                    </p>
+                    <p style="font-size: 0.78rem; color: var(--gs-ink-soft); margin-top: 2px; line-height: 1.35;">
+                      Bloqueo automático de tiempo activado por tarjeta para evitar sellos repetidos.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SCENE 6 — THE BUSINESS CONTROL PANEL (SECONDARY TABLET SHOWCASE)
+           =================================================================== -->
+      <section id="escena-panel" class="gscene-dashboard-obsidian">
+        <div class="gscene-container">
+          <div class="gscene-scene-head-center">
+            <h2 class="gscene-display-h2" style="color: #FFFFFF;">
+              Cada sello, premio y visita recurrente en un solo panel.
+            </h2>
+            <p class="gscene-display-sub" style="color: #E0D2DF;">
+              Administra tus reglas de recompensa, descarga tu cartel QR listo para imprimir, ajusta sellos manualmente si un cliente cambió de teléfono y renueva el PIN de tu personal cuando lo necesites.
+            </p>
+          </div>
+
+          <div class="gscene-ipad-bezel" aria-label="Vista previa demostrativa del panel de negocio">
+            <div class="gscene-ipad-screen">
+              <div class="gscene-ipad-topbar">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <img src="/grun-logo-loyalty.png" alt="" width="22" height="22" style="border-radius: 5px;" />
+                  <strong style="font-size: 0.9rem;">Panel de Control · Lorette Café</strong>
+                </div>
+                <span style="font-size: 0.76rem; font-weight: 600; color: var(--gs-ink-muted);">
+                  Datos demostrativos
+                </span>
+              </div>
+
+              <GrunLoyaltyV2Interactive mode="dashboard" client:visible />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SCENE 7 — PRICING ($500 MXN / MES), FAQ & FINAL CAMPAIGN CTA
+           =================================================================== -->
+      <section id="escena-precios" class="gscene-pricing-section">
+        <div class="gscene-container">
+          <div class="gscene-scene-head-center">
+            <h2 class="gscene-display-h2">
+              Un solo precio claro. Todo ilimitado.
+            </h2>
+            <p class="gscene-display-sub" style="color: var(--gs-ink-soft);">
+              Con solo 3 o 4 clientes que regresen una vez más al mes pagas toda la suscripción. Sin plazos forzosos ni comisiones por sello.
+            </p>
+          </div>
+
+          <div class="gscene-price-card">
+            <div>
+              <p class="gscene-price-big">
+                $500 <span>MXN / mes</span>
+              </p>
+              <p style="margin-top: 12px; font-size: 0.94rem; color: var(--gs-ink-soft); line-height: 1.5;">
+                Sin plazos forzosos · Cancela cuando quieras en 1 clic · $0 comisión por sello emitido o premio canjeado.
+              </p>
+              <div style="margin-top: 24px;">
+                <a href="/login" class="gscene-btn-plum" style="width: 100%;">
+                  Configura tu negocio
+                </a>
+              </div>
+            </div>
+
+            <ul
+              style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr; gap: 14px; font-size: 0.95rem; color: var(--gs-ink-soft);"
+            >
+              <li style="display: flex; align-items: center; gap: 10px;">
+                <span style="width: 22px; height: 22px; border-radius: 99px; background: var(--gs-lavender); color: var(--gs-plum); display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.78rem;">✓</span>
+                Tarjetas en Apple Wallet, Google Wallet y navegador web
+              </li>
+              <li style="display: flex; align-items: center; gap: 10px;">
+                <span style="width: 22px; height: 22px; border-radius: 99px; background: var(--gs-lavender); color: var(--gs-plum); display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.78rem;">✓</span>
+                Clientes, visitas, sellos y recompensas ilimitadas
+              </li>
+              <li style="display: flex; align-items: center; gap: 10px;">
+                <span style="width: 22px; height: 22px; border-radius: 99px; background: var(--gs-lavender); color: var(--gs-plum); display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.78rem;">✓</span>
+                Modo escaneo de empleado con PIN y modo auto-servicio
+              </li>
+              <li style="display: flex; align-items: center; gap: 10px;">
+                <span style="width: 22px; height: 22px; border-radius: 99px; background: var(--gs-lavender); color: var(--gs-plum); display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.78rem;">✓</span>
+                Cartel QR con tu marca listo para imprimir y poner en caja
+              </li>
+              <li style="display: flex; align-items: center; gap: 10px;">
+                <span style="width: 22px; height: 22px; border-radius: 99px; background: var(--gs-lavender); color: var(--gs-plum); display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.78rem;">✓</span>
+                Panel de actividad en tiempo real y respaldo de tarjetas
+              </li>
+            </ul>
+          </div>
+
+          <!-- FAQ Accordion -->
+          <GrunLoyaltyV2Interactive mode="faq" client:visible />
+
+          <!-- Closing Campaign Banner -->
+          <div class="gscene-closing-campaign">
+            <div>
+              <h2
+                style="font-family: var(--gs-font-display); font-size: clamp(1.85rem, 3.2vw, 2.7rem); font-weight: 600; line-height: 1.08; letter-spacing: -0.025em;"
+              >
+                Haz que tus clientes regresen con tu tarjeta en su celular.
+              </h2>
+              <p style="margin-top: 10px; font-size: 1.02rem; opacity: 0.9; max-width: 50ch;">
+                Ingresas tu correo, personalizas tu pase en 2 minutos y descargas tu cartel QR listo para tu mostrador.
+              </p>
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 14px;">
+              <a href="/login" class="gscene-btn-white" style="width: 100%;">
+                Configura tu negocio →
+              </a>
+              <a
+                href="mailto:contacto@grunagency.com"
+                style="color: rgba(255,255,255,0.88); font-size: 0.9rem; text-decoration: underline; text-underline-offset: 4px; align-self: center;"
+              >
+                contacto@grunagency.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================================================================
+         FOOTER
+         =================================================================== -->
+    <footer class="gscene-footer">
+      <div class="gscene-container gscene-footer-row">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img
+            src="/grun-logo-loyalty.png"
+            alt=""
+            width="24"
+            height="24"
+            loading="lazy"
+            style="border-radius: 6px;"
+          />
+          <span>© 2026 · Desarrollado en México</span>
+        </div>
+
+        <nav class="gscene-footer-links" aria-label="Enlaces legales">
+          <a href="/">Sitio actual</a>
+          <a href="/privacy">Privacidad</a>
+          <a href="/terms">Términos</a>
+          <a href="/login">Iniciar sesión</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+  <script is:inline>
+    (() => {
+      const section = document.getElementById('escena-sellos');
+      if (!section) return;
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduced || typeof IntersectionObserver === 'undefined') {
+        section.classList.add('is-visible');
+        return;
+      }
+      const io = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((e) => e.isIntersecting)) {
+            section.classList.add('is-visible');
+            io.disconnect();
+          }
+        },
+        { threshold: 0.22 }
+      );
+      io.observe(section);
+    })();
+  </script>
+</BaseLayout>
